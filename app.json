@@ -1,0 +1,203 @@
+{
+    "id": "com.squaretronics.lisa",
+    "name": {
+        "en": "Lisa",
+		"nl": "Lisa"
+    },
+    "version": "1.0.0",
+    "compatibility": "1.x",
+    "author": {
+        "name": "Joost Thijssen",
+        "email": "contact@squaretronics.com"
+    },
+    "description": {
+        "en": "Flow card that sends out Lisa RF signals when triggered.",
+        "nl": "Flow kaart die Lisa RF zendt als hij getriggerd wordt."
+    },
+    "images": {
+        "large": "./assets/images/large.jpg",
+        "small": "./assets/images/small.jpg"
+    },
+    "category": "appliances",
+	"flow": {
+		"actions": [
+			{
+				"id": "sendrf",
+				"title": {
+					"en": "Send signal",
+					"nl": "Stuur signaal"
+				},
+				"args": [
+					{
+						"name": "what",
+						"type": "dropdown",
+						"values": [
+							{
+								"id": "",
+								"label": {
+									"en": "Please make a choice",
+									"nl": "Maak een keuze"
+								}
+							},
+							{
+								"id": "Button",
+								"label": {
+									"en": "Pushbutton",
+									"nl": "Drukknop"
+								}
+							},
+							{
+								"id": "Bell1",
+								"label": {
+									"en": "Doorbell",
+									"nl": "Deurbel"
+								}
+							},
+							{
+								"id": "Baby",
+								"label": {
+									"en": "Baby Monitor",
+									"nl": "Babyfoon"
+								}
+							},
+							{
+								"id": "Phone",
+								"label": {
+									"en": "Phone",
+									"nl": "Telefoon"
+								}
+							},
+							{
+								"id": "Fire",
+								"label": {
+									"en": "Fire",
+									"nl": "Brand"
+								}
+							}
+						]
+					},
+					{
+						"name": "channel",
+						"type": "dropdown",
+						"values": [
+							{
+								"id": "0",
+								"label": {
+									"en": "Channel 0",
+									"nl": "Kanaal 0"
+								}
+							},
+							{
+								"id": "1",
+								"label": {
+									"en": "Channel 1",
+									"nl": "Kanaal 1"
+								}
+							},
+							{
+								"id": "2",
+								"label": {
+									"en": "Channel 2",
+									"nl": "Kanaal 2"
+								}
+							},
+							{
+								"id": "3",
+								"label": {
+									"en": "Channel 3",
+									"nl": "Kanaal 3"
+								}
+							},
+							{
+								"id": "4",
+								"label": {
+									"en": "Channel 4",
+									"nl": "Kanaal 4"
+								}
+							},
+							{
+								"id": "5",
+								"label": {
+									"en": "Channel 5",
+									"nl": "Kanaal 5"
+								}
+							},
+							{
+								"id": "6",
+								"label": {
+									"en": "Channel 6",
+									"nl": "Kanaal 6"
+								}
+							},
+							{
+								"id": "7",
+								"label": {
+									"en": "Channel 7",
+									"nl": "Kanaal 7"
+								}
+							},
+							{
+								"id": "8",
+								"label": {
+									"en": "Channel 8",
+									"nl": "Kanaal 8"
+								}
+							},
+							{
+								"id": "9",
+								"label": {
+									"en": "Channel 9",
+									"nl": "Kanaal 9"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+    "permissions": [
+	    "homey:wireless:868"
+    ],
+	"signals": {
+		"868": {
+			"signal_lisa": {
+				"sof": [
+					2382,
+					1622,
+					2388,
+					1607,
+					2395,
+					1603,
+					2396,
+					1604,
+					2394,
+					1604,
+					2398,
+					1602,
+					2397,
+					1682,
+					1597,
+					2283
+				],
+				"eof": [
+				],
+				"words": [
+					[
+						2397,
+						1614
+					],
+					[
+						1604,
+						2388
+					]
+				],
+				"interval": 20000,
+				"sensitivity": 0.7,
+				"repetitions": 20,
+				"minimalLength": 16,
+				"maximalLength": 16
+			}
+		}
+	}
+}
